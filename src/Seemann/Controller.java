@@ -42,10 +42,10 @@ public class Controller implements ActionListener{
 			System.exit(0);
 		}
 		
-		//Von Reichmann
+
 		if(this.v.istDasButton(e.getSource()) == true){
 			JButton test = (JButton) e.getSource();
-			System.out.println(test.getText());
+			this.v.farbenAnpassen(this.m.aendern(Integer.parseInt(test.getText())));
 		}
 	}
 }
