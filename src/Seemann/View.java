@@ -6,7 +6,6 @@ import Seemann.Model;
 
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -81,6 +80,7 @@ public class View extends JFrame{
 	
 	/**
 	 * start Methode, weiﬂt den Buttons Farben zu, Zuf‰llige Anzahl an gelben/leuchteten Buttons, die restlichen schwarz
+	 * Wird zu Begin des Programmes aufgerufen
 	 */
 	public void start(){
 		//Alle Buttons bekommen zun‰chst die Farbe schwarz
@@ -159,7 +159,6 @@ public class View extends JFrame{
 				this.buttons.get(o).setBackground(Color.black);
 			}
 		}
-		
 		this.repaint();
 	}
 }
