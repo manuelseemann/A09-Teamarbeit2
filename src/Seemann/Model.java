@@ -22,4 +22,17 @@ public class Model{
 	/**
 	 * Methoden
 	 */
+	/**
+	 * Diese Methode prüft, ob alle Lichter aus sind und das Spielende erreicht ist.
+	 * @param anzdunkel ist die Anzahl an dunklen Lichtern
+	 * @return <code>true</code> wenn das Spielende erreicht wurde
+	 * 		   <code>false</code> andernfalls
+	 */
+	 boolean spielende(int anzahldunkel){
+		 if(anzahldunkel == 25){
+			 return true;
+		 } else {
+			 return false;
+		 }
+	 }
 }
