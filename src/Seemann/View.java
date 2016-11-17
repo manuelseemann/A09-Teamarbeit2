@@ -27,6 +27,9 @@ public class View extends JFrame{
     private JButton restart;
     private JButton exit;
 	
+    private int anzahlSchwarz;
+    private int anzahlGelb;
+    
 	/**
 	 * Konstruktor
 	 * 
@@ -49,16 +52,22 @@ public class View extends JFrame{
 			this.buttons.get(i).setBackground(Color.black);;
 		}
 		
-		
-		int OG = 24;
-		int UG = 1;
+		int OG = 24; //Obergrenze
+		int UG = 1; //Untergrenze
 		//Zufallsanzahl der Elemente, die gelb werden
 		int za = (int)(Math.random()*(OG-UG)+UG);
 		
+		LinkedList gelbe = new LinkedList(); //Enthält die gelben
 		for(int i=0; i < za; i++){
 			int zz = (int)(Math.random()*(OG-UG)); //Zufallszahl welches Element gelb wird
-			this.buttons.get(zz).setBackground(Color.yellow);;
+			if(!gelbe.contains(zz)){
+				gelbe.add(zz);
+				this.buttons.get(zz).setBackground(Color.yellow);
+			}
 		}
+		
+		this.anzahlGelb = gelbe.size();
+		this.anzahlSchwarz = this.buttons.size()-this.anzahlGelb;
 		
 		JPanel b = new JPanel();
 		b.setLayout(new GridLayout(0, 5));
