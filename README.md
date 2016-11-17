@@ -5,7 +5,8 @@ Aufgabenstellung: Das Spiel Lights Out soll im Team programmiert und getestet we
 Team: Hasenberger, Mazzolini, Reichmann, Seemann
 
 Arbeitsaufteilung: 
-	Hasenberger: 
-	Mazzolini:
-	Reichmann: Dokumentation,
-	Seemann: Github, Abgabe,
+
+Hasenberger: 
+Mazzolini:
+Reichmann: Dokumentation,
+Seemann: Github, Abgabe,
