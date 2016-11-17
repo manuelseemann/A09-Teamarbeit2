@@ -28,7 +28,7 @@ public class Model{
 	 * @return <code>true</code> wenn das Spielende erreicht wurde
 	 * 		   <code>false</code> andernfalls
 	 */
-	 boolean spielende(int anzahldunkel){
+	public boolean spielende(int anzahldunkel){
 		 if(anzahldunkel == 25){
 			 return true;
 		 } else {
