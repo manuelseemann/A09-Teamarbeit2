@@ -44,7 +44,8 @@ public class View extends JFrame{
 		this.exit = new JButton("Exit");
 		this.buttons = new ArrayList<JButton>();
 		for (int i = 0; i < 25; i++) {
-			this.buttons.add(new JButton(""));
+			this.buttons.add(new JButton(i+1+""));//ALLES HIER MADE BY REICHMANN!!!!!!!!!!!!!
+			this.buttons.get(i).setFont(new Font("Arial", Font.PLAIN, 0));
 		}
 		
 		JPanel b = new JPanel();

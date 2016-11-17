@@ -2,6 +2,7 @@ package Seemann;
 
 import java.awt.event.*;
 
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 
@@ -39,6 +40,12 @@ public class Controller implements ActionListener{
 		//Wenn exit Button gedrückt wurde
 		if(this.v.istDasExit(e.getSource()) == true){
 			System.exit(0);
+		}
+		
+		//Von Reichmann
+		if(this.v.istDasButton(e.getSource()) == true){
+			JButton test = (JButton) e.getSource();
+			System.out.println(test.getText());
 		}
 	}
 }
