@@ -6,7 +6,7 @@ Team: Hasenberger, Mazzolini, Reichmann, Seemann
 
 Arbeitsaufteilung: 
 
-Hasenberger:
-Mazzolini:
-Reichmann: Dokumentation,
-Seemann: Github, Abgabe,
+Hasenberger: Model
+Mazzolini: View, Controller
+Reichmann: Dokumentation
+Seemann: Github, Abgabe
