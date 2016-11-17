@@ -103,4 +103,16 @@ public class Model{
 		}
 		return rueckgabe;
 	}
+	
+	/**
+	 * Berechnet eine Zufallszahl zwischen 1 und 24
+	 * 
+	 * @return int zufallszahl zwischen 1 und 24
+	 */
+	public int getZufallszahl(){
+		int OG = 24; //Obergrenze
+		int UG = 1; //Untergrenze
+		int zz = (int)(Math.random()*(OG-UG)+UG);
+		return zz;
+	}
 }

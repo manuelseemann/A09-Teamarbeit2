@@ -88,14 +88,10 @@ public class View extends JFrame{
 			this.buttons.get(i).setBackground(Color.black);
 		}
 		
-		int OG = 24; //Obergrenze
-		int UG = 1; //Untergrenze
-		//Zufallsanzahl der Elemente, die gelb werden
-		int za = (int)(Math.random()*(OG-UG)+UG);
-		
+		int za = this.m.getZufallszahl();//Zufallsanzahl der Elemente, die gelb werden
 		LinkedList gelbe = new LinkedList(); //Enthält die Gelben, zur späteren Zuweisung der Anzahl
 		for(int i=0; i < za; i++){
-			int zz = (int)(Math.random()*(OG-UG)); //Zufallszahl welches Element gelb wird
+			int zz = this.m.getZufallszahl(); //Zufallszahl welches Element gelb wird
 			if(!gelbe.contains(zz)){
 				gelbe.add(zz);
 				this.buttons.get(zz).setBackground(Color.yellow);
