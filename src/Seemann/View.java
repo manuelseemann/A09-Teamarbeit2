@@ -79,8 +79,11 @@ public class View extends JFrame{
         this.setVisible(true);
 	}
 	
+	/**
+	 * start Methode, weiﬂt den Buttons Farben zu, Zuf‰llige Anzahl an gelben/leuchteten Buttons, die restlichen schwarz
+	 */
 	public void start(){
-		//Alle Buttons bekommen Farbe schwarz
+		//Alle Buttons bekommen zun‰chst die Farbe schwarz
 		for (int i = 0; i < 25; i++) {
 			this.buttons.get(i).setBackground(Color.black);
 		}
@@ -90,7 +93,7 @@ public class View extends JFrame{
 		//Zufallsanzahl der Elemente, die gelb werden
 		int za = (int)(Math.random()*(OG-UG)+UG);
 		
-		LinkedList gelbe = new LinkedList(); //Enth‰lt die gelben
+		LinkedList gelbe = new LinkedList(); //Enth‰lt die Gelben, zur sp‰teren Zuweisung der Anzahl
 		for(int i=0; i < za; i++){
 			int zz = (int)(Math.random()*(OG-UG)); //Zufallszahl welches Element gelb wird
 			if(!gelbe.contains(zz)){
@@ -103,27 +106,54 @@ public class View extends JFrame{
 		this.anzahlSchwarz = this.buttons.size()-this.anzahlGelb;
 	}
 	
+	/**
+	 * Get-Methode f¸r anzahlSchwarz
+	 * 
+	 * @return int Wert mit der Anzahl der Schwarzen Buttons
+	 */
 	public int getAnzahlSchwarz(){
 		return this.anzahlSchwarz;
 	}
 	
+	/**
+	* ‹berpr¸ft ob das Object buttons enth‰lt
+	* 
+	* @param b das zu ¸berpr¸fende Object
+	* @return true wenn buttons beinhaltet b ansonsten false
+	*/
 	public boolean istDasButton(Object b){
 		if(this.buttons.contains(b)) return true;
 		return false;
 	}
 	
+	/**
+	* ‹berpr¸ft ob das Object restart ist
+	* 
+	* @param b das zu ¸berpr¸fende Object
+	* @return true wenn b gleich restart ansonsten false
+	*/
 	public boolean istDasRestart(Object b){
 		if(this.restart==b) return true;
 		return false;
 	}
 	
+	/**
+	* ‹berpr¸ft ob das Object exit ist
+	* 
+	* @param b das zu ¸berpr¸fende Object
+	* @return true wenn b gleich exit ansonsten false
+	*/
 	public boolean istDasExit(Object b){
 		if(this.exit==b) return true;
 		return false;
 	}
 	
+	/**
+	 * Methode zum Anpassen der Farben: Schwarze werden gelb, Gelbe werden schwarz
+	 * 
+	 * @param x ArrayList mit den Nummern der zu ‰nderten Feldern
+	 */
 	public void farbenAnpassen(ArrayList <Integer> x){
-		
 		for (int o : x){
 			String farbe = this.buttons.get(o).getBackground().toString();
 			
