@@ -35,4 +35,14 @@ public class Model{
 			 return false;
 		 }
 	 }
+	
+	public int [] aendern (int nummer){
+		int [] rueckgabe = new int [4];
+		rueckgabe [1] = nummer -5;
+		rueckgabe [2] = nummer +5;
+		rueckgabe [3] = nummer -1;
+		rueckgabe [4] = nummer +1;
+		rueckgabe [5] = nummer;
+		return rueckgabe;
+	}
 }
