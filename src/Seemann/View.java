@@ -98,7 +98,6 @@ public class View extends JFrame{
 				this.buttons.get(zz).setBackground(Color.yellow);
 			}
 		}
-		
 		this.anzahlGelb = gelbe.size();
 		this.anzahlSchwarz = this.buttons.size()-this.anzahlGelb;
 	}
