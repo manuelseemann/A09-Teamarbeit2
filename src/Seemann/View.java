@@ -23,12 +23,12 @@ public class View extends JFrame{
 	private Controller c; //Der Controller
     private Model m; //Das Model
     
-    private ArrayList<JButton> buttons;
-    private JButton restart;
-    private JButton exit;
+    private ArrayList<JButton> buttons; //ArrayList mit den Buttons
+    private JButton restart; //Button zum restarten des Spiels
+    private JButton exit; //Button zum schlieﬂen des Spiels
 	
-    private int anzahlSchwarz;
-    private int anzahlGelb;
+    private int anzahlSchwarz; //Anzahl der schwarzen/licht aus Felder
+    private int anzahlGelb; //Anzahl der gelben/licht an Felder
     
 	/**
 	 * Konstruktor
@@ -46,28 +46,6 @@ public class View extends JFrame{
 		for (int i = 0; i < 25; i++) {
 			this.buttons.add(new JButton(""));
 		}
-		
-		//Alle Buttons bekommen Farbe schwarz
-		for (int i = 0; i < 25; i++) {
-			this.buttons.get(i).setBackground(Color.black);;
-		}
-		
-		int OG = 24; //Obergrenze
-		int UG = 1; //Untergrenze
-		//Zufallsanzahl der Elemente, die gelb werden
-		int za = (int)(Math.random()*(OG-UG)+UG);
-		
-		LinkedList gelbe = new LinkedList(); //Enth‰lt die gelben
-		for(int i=0; i < za; i++){
-			int zz = (int)(Math.random()*(OG-UG)); //Zufallszahl welches Element gelb wird
-			if(!gelbe.contains(zz)){
-				gelbe.add(zz);
-				this.buttons.get(zz).setBackground(Color.yellow);
-			}
-		}
-		
-		this.anzahlGelb = gelbe.size();
-		this.anzahlSchwarz = this.buttons.size()-this.anzahlGelb;
 		
 		JPanel b = new JPanel();
 		b.setLayout(new GridLayout(0, 5));
@@ -89,6 +67,7 @@ public class View extends JFrame{
         this.add(b, BorderLayout.CENTER);
         this.add(s, BorderLayout.SOUTH);
         
+        //Adden zum ActionListener
         Iterator<JButton> i = buttons.iterator();
 		while(i.hasNext()){
 			i.next().addActionListener(this.c);
@@ -97,6 +76,30 @@ public class View extends JFrame{
 		exit.addActionListener(this.c);
         
         this.setVisible(true);
+	}
+	
+	public void start(){
+		//Alle Buttons bekommen Farbe schwarz
+		for (int i = 0; i < 25; i++) {
+			this.buttons.get(i).setBackground(Color.black);;
+		}
+		
+		int OG = 24; //Obergrenze
+		int UG = 1; //Untergrenze
+		//Zufallsanzahl der Elemente, die gelb werden
+		int za = (int)(Math.random()*(OG-UG)+UG);
+		
+		LinkedList gelbe = new LinkedList(); //Enth‰lt die gelben
+		for(int i=0; i < za; i++){
+			int zz = (int)(Math.random()*(OG-UG)); //Zufallszahl welches Element gelb wird
+			if(!gelbe.contains(zz)){
+				gelbe.add(zz);
+				this.buttons.get(zz).setBackground(Color.yellow);
+			}
+		}
+		
+		this.anzahlGelb = gelbe.size();
+		this.anzahlSchwarz = this.buttons.size()-this.anzahlGelb;
 	}
 	
 	public boolean istDasButton(Object b){

@@ -24,6 +24,7 @@ public class Controller implements ActionListener{
 	public Controller(){
 		this.m = new Model();
 		this.v = new View(this.m, this);
+		this.v.start();
 	}
 	
 	@Override
@@ -32,6 +33,7 @@ public class Controller implements ActionListener{
 		if(this.v.istDasRestart(e.getSource()) == true){
 			this.v.setVisible(false);
 			this.v = new View(this.m, this);
+			this.v.start();
 		}
 		
 		//Wenn exit Button gedrückt wurde
