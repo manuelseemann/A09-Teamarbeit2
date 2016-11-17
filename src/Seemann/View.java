@@ -13,8 +13,8 @@ import java.util.LinkedList;
 /**
 * Die View, Fenster mit Interaktionselementen
 * 
-* @author Paul Mazzolini
-* @version 2016-10-26
+* @author Hasenberger, Mazzolini, Reichmann, Seemann
+* @version 2016-11-17
 */
 public class View extends JFrame{
 	/**
@@ -44,7 +44,7 @@ public class View extends JFrame{
 		this.exit = new JButton("Exit");
 		this.buttons = new ArrayList<JButton>();
 		for (int i = 0; i < 25; i++) {
-			this.buttons.add(new JButton(i+1+""));//ALLES HIER MADE BY REICHMANN!!!!!!!!!!!!!
+			this.buttons.add(new JButton(i+""));
 			this.buttons.get(i).setFont(new Font("Arial", Font.PLAIN, 0));
 		}
 		
@@ -122,7 +122,18 @@ public class View extends JFrame{
 		return false;
 	}
 	
-	public void farbenAnpassen(int[] x){
+	public void farbenAnpassen(ArrayList <Integer> x){
 		
+		for (int o : x){
+			String farbe = this.buttons.get(o).getBackground().toString();
+			
+			if(farbe.equals("java.awt.Color[r=0,g=0,b=0]")){
+				this.buttons.get(o).setBackground(Color.yellow);
+			}else{
+				this.buttons.get(o).setBackground(Color.black);
+			}
+		}
+		
+		this.repaint();
 	}
 }

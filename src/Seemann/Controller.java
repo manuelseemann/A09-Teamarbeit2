@@ -9,8 +9,8 @@ import javax.swing.JOptionPane;
 /**
 * Der Controller
 * 
-* @author Paul Mazzolini
-* @version 2016-10-26
+* @author Hasenberger, Mazzolini, Reichmann, Seemann
+* @version 2016-11-17
 */
 public class Controller implements ActionListener{
 	/**
@@ -45,12 +45,11 @@ public class Controller implements ActionListener{
 
 		if(this.v.istDasButton(e.getSource()) == true){
 			JButton test = (JButton) e.getSource();
-			//this.v.farbenAnpassen(this.m.aendern(Integer.parseInt(test.getText())));
-			System.out.println(test.getText());
+			this.v.farbenAnpassen(this.m.aendern(Integer.parseInt(test.getText())));
 			if(this.m.spielende(this.v.getAnzahlSchwarz())){
 				JOptionPane.showMessageDialog(null, "Spielende!");
 			}
-			this.v.farbenAnpassen(this.m.aendern(Integer.parseInt(test.getText())));
+			
 		}
 	}
 }

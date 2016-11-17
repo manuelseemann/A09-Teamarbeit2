@@ -1,10 +1,12 @@
 package Seemann;
 
+import java.util.ArrayList;
+
 /**
 * Das Model, enthält die Geschäftslogik der GUI
 * 
-* @author Paul Mazzolini
-* @version 2016-10-26
+* @author Hasenberger, Mazzolini, Reichmann, Seemann
+* @version 2016-11-17
 */
 public class Model{
 	/**
@@ -36,13 +38,69 @@ public class Model{
 		 }
 	 }
 	
-	public int [] aendern (int nummer){
-		int [] rueckgabe = new int [4];
-		rueckgabe [1] = nummer -5;
-		rueckgabe [2] = nummer +5;
-		rueckgabe [3] = nummer -1;
-		rueckgabe [4] = nummer +1;
-		rueckgabe [5] = nummer;
+	public ArrayList <Integer> aendern (int nummer){
+
+		ArrayList <Integer> rueckgabe = new ArrayList <Integer>(); 
+		//Hauptfeld mitte
+		if(nummer >=6 && nummer <=8 || nummer >=11 && nummer <=13 || nummer >=16 && nummer <=18){
+			rueckgabe.add(nummer -5);
+			rueckgabe.add(nummer +5);
+			rueckgabe.add(nummer -1);
+			rueckgabe.add(nummer +1);
+			rueckgabe.add(nummer);
+		}
+		//Linker Rand
+		if(nummer == 5|| nummer == 10 || nummer == 15){
+			rueckgabe.add(nummer -5);
+			rueckgabe.add(nummer +5);
+			rueckgabe.add(nummer +1);
+			rueckgabe.add(nummer);
+		}
+		//Oberer Rand
+		if(nummer >= 1 && nummer <= 3){
+			rueckgabe.add(nummer +5);
+			rueckgabe.add(nummer -1);
+			rueckgabe.add(nummer +1);
+			rueckgabe.add(nummer);
+		}
+		//Rechter Rand
+		if(nummer == 9|| nummer == 14 || nummer == 19){
+			rueckgabe.add(nummer -5);
+			rueckgabe.add(nummer +5);
+			rueckgabe.add(nummer -1);
+			rueckgabe.add(nummer);
+		}
+		//Unterer Rand
+		if(nummer >= 21 && nummer <= 23){
+			rueckgabe.add(nummer -5);
+			rueckgabe.add(nummer -1);
+			rueckgabe.add(nummer +1);
+			rueckgabe.add(nummer);
+		}
+		//Ecke links oben
+		if(nummer == 0){
+			rueckgabe.add(nummer +5);
+			rueckgabe.add(nummer +1);
+			rueckgabe.add(nummer);
+		}
+		//Ecke rechts oben 
+		if(nummer == 4){
+			rueckgabe.add(nummer +5);
+			rueckgabe.add(nummer -1);
+			rueckgabe.add(nummer);
+		}
+		//Ecke rechts unten 
+		if(nummer == 24){
+			rueckgabe.add(nummer -5);
+			rueckgabe.add(nummer -1);
+			rueckgabe.add(nummer);
+		}
+		//Ecke links unten
+		if(nummer == 20){
+			rueckgabe.add(nummer -5);
+			rueckgabe.add(nummer +1);
+			rueckgabe.add(nummer);
+		}
 		return rueckgabe;
 	}
 }

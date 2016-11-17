@@ -9,4 +9,4 @@ Arbeitsaufteilung:
 Hasenberger: Model
 Mazzolini: View, Controller
 Reichmann: Dokumentation
-Seemann: Github, Abgabe, Model
+Seemann: Github, Abgabe, Model(aender), View (farbenAnpassen)
