@@ -5,6 +5,7 @@ import Seemann.Controller;
 import Seemann.Model;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -22,7 +23,7 @@ public class View extends JFrame{
 	private Controller c; //Der Controller
     private Model m; //Das Model
     
-    private LinkedList<JButton> buttons;
+    private ArrayList<JButton> buttons;
     private JButton restart;
     private JButton exit;
 	
@@ -38,9 +39,25 @@ public class View extends JFrame{
 		
 		this.restart = new JButton("Restart");
 		this.exit = new JButton("Exit");
-		this.buttons = new LinkedList<JButton>();
+		this.buttons = new ArrayList<JButton>();
 		for (int i = 0; i < 25; i++) {
 			this.buttons.add(new JButton(""));
+		}
+		
+		//Alle Buttons bekommen Farbe schwarz
+		for (int i = 0; i < 25; i++) {
+			this.buttons.get(i).setBackground(Color.black);;
+		}
+		
+		
+		int OG = 24;
+		int UG = 1;
+		//Zufallsanzahl der Elemente, die gelb werden
+		int za = (int)(Math.random()*(OG-UG)+UG);
+		
+		for(int i=0; i < za; i++){
+			int zz = (int)(Math.random()*(OG-UG)); //Zufallszahl welches Element gelb wird
+			this.buttons.get(zz).setBackground(Color.yellow);;
 		}
 		
 		JPanel b = new JPanel();
