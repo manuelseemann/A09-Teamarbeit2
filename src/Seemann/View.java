@@ -103,6 +103,10 @@ public class View extends JFrame{
 		this.anzahlSchwarz = this.buttons.size()-this.anzahlGelb;
 	}
 	
+	public int getAnzahlSchwarz(){
+		return this.anzahlSchwarz;
+	}
+	
 	public boolean istDasButton(Object b){
 		if(this.buttons.contains(b)) return true;
 		return false;
