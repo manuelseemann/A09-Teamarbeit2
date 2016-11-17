@@ -121,4 +121,8 @@ public class View extends JFrame{
 		if(this.exit==b) return true;
 		return false;
 	}
+	
+	public void farbenAnpassen(int[] x){
+		
+	}
 }
