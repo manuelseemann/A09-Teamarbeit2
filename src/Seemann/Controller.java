@@ -45,7 +45,7 @@ public class Controller implements ActionListener{
 
 		if(this.v.istDasButton(e.getSource()) == true){
 			JButton test = (JButton) e.getSource();
-			this.v.farbenAnpassen(this.m.aendern(Integer.parseInt(test.getText())));
+			//this.v.farbenAnpassen(this.m.aendern(Integer.parseInt(test.getText())));
 		}
 	}
 }

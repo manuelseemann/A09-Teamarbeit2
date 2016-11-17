@@ -82,7 +82,7 @@ public class View extends JFrame{
 	public void start(){
 		//Alle Buttons bekommen Farbe schwarz
 		for (int i = 0; i < 25; i++) {
-			this.buttons.get(i).setBackground(Color.black);;
+			this.buttons.get(i).setBackground(Color.black);
 		}
 		
 		int OG = 24; //Obergrenze
