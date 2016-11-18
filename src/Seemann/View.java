@@ -85,7 +85,7 @@ public class View extends JFrame{
 			this.buttons.get(i).setBackground(Color.black);
 		}
 		
-		//Zufällige Buttons werden gedrückt
+		//Zufällige Buttons werden "gedrückt"
 		int za = this.m.getZufallszahl();
 		for(int i=0; i < za; i++){
 			int zz = this.m.getZufallszahl();
