@@ -77,7 +77,7 @@ public class View extends JFrame{
 	
 	/**
 	 * start Methode, weiﬂt den Buttons Farben zu, Zuf‰llige Anzahl an gelben/leuchteten Buttons, die restlichen schwarz
-	 * Wird zu Begin des Programmes aufgerufen
+	 * Soll zu Begin des Programmes aufgerufen werden
 	 */
 	public void start(){
 		//Alle Buttons bekommen zun‰chst die Farbe schwarz
