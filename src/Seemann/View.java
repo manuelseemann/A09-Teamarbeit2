@@ -88,18 +88,12 @@ public class View extends JFrame{
 			this.buttons.get(i).setBackground(Color.black);
 		}
 		
-		//Zufällige Buttons bekommen die Farbe gelb
-		int za = this.m.getZufallszahl();//Zufallsanzahl der Elemente, die gelb werden
-		LinkedList gelbe = new LinkedList(); //Enthält die Gelben, zur späteren Zuweisung der Anzahl
+		//Zufällige Buttons werden zurerst gedrückt
+		int za = this.m.getZufallszahl();
 		for(int i=0; i < za; i++){
-			int zz = this.m.getZufallszahl(); //Zufallszahl welches Element gelb wird
-			if(!gelbe.contains(zz)){
-				gelbe.add(zz);
-				this.buttons.get(zz).setBackground(Color.yellow);
-			}
+			int zz = this.m.getZufallszahl();
+			this.farbenAnpassen(this.m.aendern(zz));
 		}
-		this.anzahlGelb = gelbe.size();
-		this.anzahlSchwarz = this.buttons.size()-this.anzahlGelb;
 	}
 	
 	/**

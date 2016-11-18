@@ -49,7 +49,6 @@ public class Controller implements ActionListener{
 			if(this.m.spielende(this.v.getAnzahlSchwarz())){
 				JOptionPane.showMessageDialog(null, "Spielende!");
 			}
-			
 		}
 	}
 }
