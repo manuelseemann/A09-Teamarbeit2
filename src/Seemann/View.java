@@ -25,9 +25,6 @@ public class View extends JFrame{
     private ArrayList<JButton> buttons; //ArrayList mit den Buttons
     private JButton restart; //Button zum restarten des Spiels
     private JButton exit; //Button zum schlieﬂen des Spiels
-	
-    private int anzahlSchwarz; //Anzahl der schwarzen/licht aus Felder
-    private int anzahlGelb; //Anzahl der gelben/licht an Felder
     
 	/**
 	 * Konstruktor
@@ -102,7 +99,13 @@ public class View extends JFrame{
 	 * @return int Wert mit der Anzahl der Schwarzen Buttons
 	 */
 	public int getAnzahlSchwarz(){
-		return this.anzahlSchwarz;
+		int black = 0;
+		for(int i=0; i<25; i++){
+			if(this.buttons.get(i).getBackground().toString().equals("java.awt.Color[r=0,g=0,b=0]")){
+				black++;
+			}
+		}
+		return black;
 	}
 	
 	/**
