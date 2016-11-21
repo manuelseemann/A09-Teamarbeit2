@@ -37,7 +37,11 @@ public class Model{
 			 return false;
 		 }
 	 }
-	
+	/**
+	 * Die Methode aendern überprüft das value des geklickten Feldes und return dann die zu ändernden Felder.
+	 * @param nummer
+	 * @return ArrayList <Integer> Die zu ändernen Farben
+	 */
 
 	public ArrayList <Integer> aendern (int nummer){
 
