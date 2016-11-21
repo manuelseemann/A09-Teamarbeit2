@@ -38,6 +38,11 @@ public class Model{
 		 }
 	 }
 	
+	/**
+	 * Die Methode aendern überprüft das value des geklickten Feldes und return dann die zu ändernden Felder.
+	 * @param nummer
+	 * @return ArrayList <Integer> Die zu ändernen Farben
+	 */
 	public ArrayList <Integer> aendern (int nummer){
 
 		ArrayList <Integer> rueckgabe = new ArrayList <Integer>(); 
@@ -111,7 +116,7 @@ public class Model{
 	 */
 	public int getZufallszahl(){
 		int OG = 24; //Obergrenze
-		int UG = 1; //Untergrenze
+		int UG = 3; //Untergrenze
 		int zz = (int)(Math.random()*(OG-UG)+UG);
 		return zz;
 	}
