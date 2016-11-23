@@ -36,6 +36,7 @@ public class Controller implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		//Wenn restart Button gedrückt wurde
 		if(this.v.istDasRestart(e.getSource()) == true){
+			this.m.setStartZeit();
 			this.v.setVisible(false);
 			this.v = new View(this.m, this);
 			this.v.start();
@@ -51,7 +52,7 @@ public class Controller implements ActionListener{
 			JButton test = (JButton) e.getSource();
 			this.v.farbenAnpassen(this.m.aendern(Integer.parseInt(test.getText())));
 			if(this.m.spielende(this.v.getAnzahlSchwarz())){
-				JOptionPane.showMessageDialog(null, "Spielende! Sie haben gewonnen!");
+				JOptionPane.showMessageDialog(null, "Spielende! Sie haben gewonnen! " + this.m.getSpieldauer());
 				this.v.setVisible(false);
 				this.v = new View(this.m, this);
 				this.v.start();

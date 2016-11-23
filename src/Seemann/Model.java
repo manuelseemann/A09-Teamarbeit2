@@ -12,7 +12,8 @@ public class Model{
 	/**
 	 * Attribute
 	 */
-	
+	private int startZeit;
+	private int endZeit;
 	
 	/**
 	 * Konstruktor
@@ -119,5 +120,13 @@ public class Model{
 		int UG = 3; //Untergrenze
 		int zz = (int)(Math.random()*(OG-UG)+UG);
 		return zz;
+	}
+	
+	public void setStartZeit(){
+		this.startZeit = (int)(System.nanoTime());
+	}
+	public int getSpieldauer(){
+		this.endZeit = (int)(System.nanoTime());
+		return (int)((this.endZeit-this.startZeit))/10000000;
 	}
 }
