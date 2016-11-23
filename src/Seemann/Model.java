@@ -123,10 +123,10 @@ public class Model{
 	}
 	
 	public void setStartZeit(){
-		this.startZeit = (int)(System.nanoTime());
+		this.startZeit = (int)(System.currentTimeMillis());
 	}
 	public int getSpieldauer(){
-		this.endZeit = (int)(System.nanoTime());
-		return (int)((this.endZeit-this.startZeit))/10000000;
+		this.endZeit = (int)(System.currentTimeMillis());
+		return (int)((this.endZeit-this.startZeit))/1000;
 	}
 }

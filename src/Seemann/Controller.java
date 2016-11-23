@@ -52,7 +52,7 @@ public class Controller implements ActionListener{
 			JButton test = (JButton) e.getSource();
 			this.v.farbenAnpassen(this.m.aendern(Integer.parseInt(test.getText())));
 			if(this.m.spielende(this.v.getAnzahlSchwarz())){
-				JOptionPane.showMessageDialog(null, "Spielende! Sie haben gewonnen! " + this.m.getSpieldauer());
+				JOptionPane.showMessageDialog(null, "Spielende! Sie haben gewonnen! " + "Sie brauchten: " +this.m.getSpieldauer() + "Sekunden.");
 				this.v.setVisible(false);
 				this.v = new View(this.m, this);
 				this.v.start();
