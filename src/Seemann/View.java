@@ -83,6 +83,7 @@ public class View extends JFrame{
 		//Alle Buttons bekommen zunächst die Farbe schwarz
 		for (int i = 0; i < 25; i++) {
 			this.buttons.get(i).setBackground(Color.black);
+			this.buttons.get(i).setForeground(Color.BLACK);
 		}
 		
 		//Zufällige Buttons werden "gedrückt"
@@ -152,8 +153,10 @@ public class View extends JFrame{
 			
 			if(farbe.equals("java.awt.Color[r=0,g=0,b=0]")){
 				this.buttons.get(o).setBackground(Color.yellow);
+				this.buttons.get(o).setForeground(Color.yellow);
 			}else{
 				this.buttons.get(o).setBackground(Color.black);
+				this.buttons.get(o).setForeground(Color.black);
 			}
 		}
 		this.repaint();
