@@ -121,10 +121,18 @@ public class Model{
 		int zz = (int)(Math.random()*(OG-UG)+UG);
 		return zz;
 	}
-	
+	/**
+	 * Setzt die Startzeit des Spiels / der Runde im Spiel
+	 * 
+	 */
 	public void setStartZeit(){
 		this.startZeit = (int)(System.currentTimeMillis());
 	}
+	/**
+	 * Berechnet die Endzeit und zieht davon die Startzeit ab
+	 * 
+	 * @return Die Laufzeit in Sekunden umgerechnet 
+	 */
 	public int getSpieldauer(){
 		this.endZeit = (int)(System.currentTimeMillis());
 		return (int)((this.endZeit-this.startZeit))/1000;
