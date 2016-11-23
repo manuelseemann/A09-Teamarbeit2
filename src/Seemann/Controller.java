@@ -36,7 +36,6 @@ public class Controller implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		//Wenn restart Button gedrückt wurde
 		if(this.v.istDasRestart(e.getSource()) == true){
-			this.m.setStartZeit();
 			this.v.setVisible(false);
 			this.v = new View(this.m, this);
 			this.v.start();
