@@ -6,7 +6,7 @@ Team: Hasenberger, Mazzolini, Reichmann, Seemann
 
 Arbeitsaufteilung: 
 
-Hasenberger: Model, Dokumentation
+Hasenberger: Model(spielende), Dokumentation
 Mazzolini: View, Controller, Model(Zufallszahl)
 Reichmann: Dokumentation
 Seemann: Github, Abgabe, Model(aender), View (farbenAnpassen)
