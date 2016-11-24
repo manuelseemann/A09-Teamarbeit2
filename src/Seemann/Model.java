@@ -19,12 +19,10 @@ public class Model{
 	 * Konstruktor
 	 */
 	public Model(){
-		
+		this.startZeit = 0;
+		this.endZeit = 0;
 	}
 	
-	/**
-	 * Methoden
-	 */
 	/**
 	 * Diese Methode prüft, ob alle Lichter aus sind und das Spielende erreicht ist.
 	 * @param anzdunkel ist die Anzahl an dunklen Lichtern
@@ -38,14 +36,14 @@ public class Model{
 			 return false;
 		 }
 	 }
+	
 	/**
 	 * Die Methode aendern überprüft das value des geklickten Feldes und return dann die zu ändernden Felder.
+	 * 
 	 * @param nummer
 	 * @return ArrayList <Integer> Die zu ändernen Farben
 	 */
-
 	public ArrayList <Integer> aendern (int nummer){
-
 		ArrayList <Integer> rueckgabe = new ArrayList <Integer>(); 
 		//Hauptfeld mitte
 		if(nummer >=6 && nummer <=8 || nummer >=11 && nummer <=13 || nummer >=16 && nummer <=18){
@@ -121,13 +119,14 @@ public class Model{
 		int zz = (int)(Math.random()*(OG-UG)+UG);
 		return zz;
 	}
+	
 	/**
 	 * Setzt die Startzeit des Spiels / der Runde im Spiel
-	 * 
 	 */
 	public void setStartZeit(){
 		this.startZeit = (int)(System.currentTimeMillis());
 	}
+	
 	/**
 	 * Berechnet die Endzeit und zieht davon die Startzeit ab
 	 * 
