@@ -22,7 +22,7 @@ public class Test{
 		m.aendern(89);
 		}
 		catch(NumberFormatException e){
-			System.out.println("Die Nummer ist auﬂerhalb des Wetebereichs.");
+			System.out.println("Die Nummer ist auﬂerhalb des Wertebereichs.");
 		}
 		System.out.println(m.getZufallszahl());
 		
