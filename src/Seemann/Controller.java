@@ -48,8 +48,9 @@ public class Controller implements ActionListener{
 		
 		//Wenn einer der Buttons des Spiels gedrückt wurde
 		if(this.v.istDasButton(e.getSource()) == true){
-			JButton test = (JButton) e.getSource();
-			this.v.farbenAnpassen(this.m.aendern(Integer.parseInt(test.getText())));
+			JButton pressed = (JButton) e.getSource(); //Schaut welcher Button gedrückt wurde
+			System.out.println("Button Nummer: "+ pressed.getText());//Nur für Testing
+			this.v.farbenAnpassen(this.m.aendern(Integer.parseInt(pressed.getText())));
 			if(this.m.spielende(this.v.getAnzahlSchwarz())){
 				JOptionPane.showMessageDialog(null, "Spielende! Sie haben gewonnen! " + "Sie brauchten: " +this.m.getSpieldauer() + "Sekunden.");
 				this.v.setVisible(false);

@@ -24,13 +24,16 @@ public class Model{
 	}
 	
 	/**
+	 * 
+	 * 
 	 * Diese Methode prüft, ob alle Lichter aus sind und das Spielende erreicht ist.
+	 * @throws NumberFormatException wenn Zahl außerhalb des Bereiches
 	 * @param anzdunkel ist die Anzahl an dunklen Lichtern
 	 * @return <code>true</code> wenn das Spielende erreicht wurde
 	 * 		   <code>false</code> andernfalls
 	 */
 	public boolean spielende(int anzahldunkel)throws  NumberFormatException{
-		if(anzahldunkel > 25)throw new NumberFormatException();
+		if(anzahldunkel > 25 || anzahldunkel > 0)throw new NumberFormatException();
 		 if(anzahldunkel == 25){
 			 return true;
 		 } else {
@@ -41,11 +44,12 @@ public class Model{
 	/**
 	 * Die Methode aendern überprüft das value des geklickten Feldes und return dann die zu ändernden Felder.
 	 * 
+	 * @throws NumberFormatException wenn Zahl außerhalb des Bereiches
 	 * @param nummer
 	 * @return ArrayList <Integer> Die zu ändernen Farben
 	 */
-	public ArrayList <Integer> aendern (int nummer) throws  NumberFormatException{
-		if(nummer > 25)throw new NumberFormatException();
+	public ArrayList <Integer> aendern(int nummer) throws  NumberFormatException{
+		if(nummer > 25 || nummer > 0)throw new NumberFormatException();
 		ArrayList <Integer> rueckgabe = new ArrayList <Integer>(); 
 		//Hauptfeld mitte
 		if(nummer >=6 && nummer <=8 || nummer >=11 && nummer <=13 || nummer >=16 && nummer <=18){
