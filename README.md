@@ -8,5 +8,5 @@ Arbeitsaufteilung:
 
 Hasenberger: Model(spielende), Dokumentation
 Mazzolini: View, Controller, Model(Zufallszahl)
-Reichmann: Dokumentation
+Reichmann: Dokumentation, Model, View, Test, Controller
 Seemann: Github, Abgabe, Model(aendern), View (farbenAnpassen)
