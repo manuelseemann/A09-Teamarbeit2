@@ -12,8 +12,8 @@ public class Model{
 	/**
 	 * Attribute
 	 */
-	private int startZeit;
-	private int endZeit;
+	private int startZeit; //Startzeit
+	private int endZeit; //Endzeit
 	
 	/**
 	 * Konstruktor
