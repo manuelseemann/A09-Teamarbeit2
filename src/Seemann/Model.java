@@ -29,7 +29,8 @@ public class Model{
 	 * @return <code>true</code> wenn das Spielende erreicht wurde
 	 * 		   <code>false</code> andernfalls
 	 */
-	public boolean spielende(int anzahldunkel){
+	public boolean spielende(int anzahldunkel)throws  NumberFormatException{
+		if(anzahldunkel > 25)throw new NumberFormatException();
 		 if(anzahldunkel == 25){
 			 return true;
 		 } else {
@@ -43,7 +44,8 @@ public class Model{
 	 * @param nummer
 	 * @return ArrayList <Integer> Die zu ändernen Farben
 	 */
-	public ArrayList <Integer> aendern (int nummer){
+	public ArrayList <Integer> aendern (int nummer) throws  NumberFormatException{
+		if(nummer > 25)throw new NumberFormatException();
 		ArrayList <Integer> rueckgabe = new ArrayList <Integer>(); 
 		//Hauptfeld mitte
 		if(nummer >=6 && nummer <=8 || nummer >=11 && nummer <=13 || nummer >=16 && nummer <=18){
@@ -115,7 +117,7 @@ public class Model{
 	 */
 	public int getZufallszahl(){
 		int OG = 24; //Obergrenze
-		int UG = 3; //Untergrenze
+		int UG = 1; //Untergrenze
 		int zz = (int)(Math.random()*(OG-UG)+UG);
 		return zz;
 	}

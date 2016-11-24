@@ -14,7 +14,19 @@ public class Test{
 	* @param args
 	*/
 	public static void main(String[] args){
-		new Controller();
+		Controller c = new Controller();
+		Model m = new Model();
+
+		
+		//Testing der einzelnen Methoden:
+		try{
+		System.out.println("Ist das Spiel zu ende?: "+ m.spielende(14));
+		m.aendern(89);
+		}
+		catch(NumberFormatException e){
+			System.out.println("Die Nummer war zu groﬂ.");
+		}
+		System.out.println(m.getZufallszahl());
 		
 	}
 }
