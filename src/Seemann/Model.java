@@ -33,7 +33,7 @@ public class Model{
 	 * 		   <code>false</code> andernfalls
 	 */
 	public boolean spielende(int anzahldunkel)throws  NumberFormatException{
-		if(anzahldunkel > 25 || anzahldunkel > 0)throw new NumberFormatException();
+		if(anzahldunkel > 25 && anzahldunkel > 0)throw new NumberFormatException();
 		 if(anzahldunkel == 25){
 			 return true;
 		 } else {
@@ -49,7 +49,7 @@ public class Model{
 	 * @return ArrayList <Integer> Die zu ändernen Farben
 	 */
 	public ArrayList <Integer> aendern(int nummer) throws  NumberFormatException{
-		if(nummer > 25 || nummer > 0)throw new NumberFormatException();
+		if(nummer > 25 && nummer > 0)throw new NumberFormatException();
 		ArrayList <Integer> rueckgabe = new ArrayList <Integer>(); 
 		//Hauptfeld mitte
 		if(nummer >=6 && nummer <=8 || nummer >=11 && nummer <=13 || nummer >=16 && nummer <=18){
